@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ife_task</title>
+    <style>
+        * {
+            margin:0;
+            padding: 0;
+        }
+
+        .wrap {
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+
+        input {
+            display: none;
+        }
+
+        .radio{
+            width: 16px;
+            height: 16px;
+            border: none;
+            background: url("bg.png") no-repeat;
+            display: inline-block;
+        }
+        .checkbox{
+            width: 16px;
+            height: 16px;
+            background: url("bg.png") no-repeat;
+            display: block;
+        }
+        #radio1+label,#radio2+label{
+            background-position: -6px -5px;
+        }
+        #radio1:checked+label,#radio2:checked+label{
+            background-position: -41px -5px;
+        }
+        #checkbox1+label{
+            background-position:  -6px -26px ;
+        }
+        #checkbox1:checked+label{
+            background-position: -41px -26px;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <input type="radio" id="radio1" name="radio" value="r1">
+    <label for="radio1" class="radio"></label>
+    <input type="radio" id="radio2" name="radio" value="r2">
+    <label for="radio2" class="radio"></label>
+    <br>
+    <input type="checkbox" id="checkbox1">
+    <label for="checkbox1" class="checkbox"></label>
+</div>
+</body>
+</html>

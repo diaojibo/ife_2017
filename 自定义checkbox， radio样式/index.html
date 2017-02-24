@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <title>ife_task</title>
     <style>
-        *{
+        * {
+            margin:0;
             box-sizing: border-box;
+            padding: 0;
         }
+
         .wrap {
             margin-top: 10px;
             margin-left: 10px;
@@ -15,32 +18,58 @@
         input {
             display: none;
         }
-        .checkbox{
+
+        .checkbox {
             width: 20px;
             height: 20px;
             display: block;
             border: 1px solid #d9d9d9;
         }
-        #checkbox1:checked + label{
-            border: 1px solid #d73d32;
+
+        .radio {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            border: 1px solid #d9d9d9;
+            border-radius: 10px;
+            text-align: center;
+            line-height: 20px;
         }
-        #checkbox1:checked + label::after{
+
+        #checkbox1:checked + label, #radio1:checked + label, #radio2:checked + label {
+            border: 1px solid #d73e33;
+        }
+
+        #checkbox1:checked + label::after {
             content: '\2714';
             color: red;
             display: block;
             line-height: 20px;
             font-size: 10px;
             text-align: center;
+            font-weight: bold;
+        }
+
+        #radio1:checked + label::after,#radio2:checked+label::after {
+            content: "";
+            display: block;
+            width: 8px;
+            height: 8px;
+            background: #d73e33;
+            border-radius: 4px;
+            margin:5px auto 0 auto;
         }
     </style>
 </head>
 <body>
 <div class="wrap">
+    <input type="radio" id="radio1" name="radio" value="r1">
+    <label for="radio1" class="radio"></label>
+    <input type="radio" id="radio2" name="radio" value="r2">
+    <label for="radio2" class="radio"></label>
+    <br>
     <input type="checkbox" id="checkbox1">
     <label for="checkbox1" class="checkbox"></label>
-    <br>
-    <input type="radio" id="radio1">
-    <label for="radio1" class="radio"></label>
 </div>
 </body>
 </html>
